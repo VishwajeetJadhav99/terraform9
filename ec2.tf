@@ -5,10 +5,14 @@ provider "aws" {
 }
 
 resource "aws_instance" "web_server" {
-  ami           = ""
-  instance_type = "t2.micro"
-  vpc_security_group_ids =
-  key_name =
+  ami           = "ami-00d2dbb426772b03a"
+  instance_type = "t3.micro"
+  vpc_security_group_ids = ["sg-0fecd01f792e2c2e8"]
+  key_name = "linux-newkey"
+  tag = {
+    purpose = "practice"
+  }
+  count = 2
 
   
 }
