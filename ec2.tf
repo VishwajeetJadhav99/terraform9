@@ -9,7 +9,7 @@ resource "aws_instance" "web_server" {
   instance_type = "t3.micro"
   vpc_security_group_ids = ["sg-0fecd01f792e2c2e8"]
   key_name = "linux-newkey"
-  tag = {
+  tags = {
     purpose = "practice"
   }
   count = 2
