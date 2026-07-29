@@ -7,7 +7,7 @@ provider "aws" {
 resource "aws_instance" "web_server" {
   ami           = "ami-0884624fc54d115f3"
   instance_type = "t3.micro"
-  vpc_security_group_ids = ["sg-0fecd01f792e2c2e8" , aws_security_group.sg_group  ]
+  vpc_security_group_ids = ["sg-0fecd01f792e2c2e8" , aws_security_group.sg_group.id  ]
   key_name = "linux-newkey"
   tags = {
     purpose = "practice"
@@ -30,7 +30,7 @@ resource "aws_security_group" "sg_group" {
   ingress {
     from_port        = 80
     to_port          = 80
-    protocol         = "TCP"
+    protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
     
   }
@@ -38,8 +38,8 @@ resource "aws_security_group" "sg_group" {
 
   ingress {
     from_port        = 0
-    to_port          = 0
-    protocol         = "TCP"
+    to_port          = 65535
+    protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
     
   }
