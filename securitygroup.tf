@@ -11,7 +11,7 @@ resource "aws_instance" "web_server" {
   tags = {
     purpose = "practice"
  }
-  count = var.instno
+  #count = var.instno
   disable_api_termination = var.insdelprotection
   user_data = <<-EOF
               #!/bin/bash
