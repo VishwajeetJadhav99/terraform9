@@ -19,7 +19,7 @@ variable "key" {
 
 variable "instno" {
 
-    default = 2
+    default = 1
 }
 
 
