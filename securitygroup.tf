@@ -6,7 +6,7 @@ provider "aws" {
 resource "aws_instance" "web_server" {
   ami           = var.instamid
   instance_type = var.intype
-  vpc_security_group_ids = [ var.sg , aws_security_group.sg_group.id  ]
+  vpc_security_group_ids = [ var.sg , aws_security_group.sg_group.id , data.aws_security_group.security_group.id  ]
   key_name = var.key
   tags = {
     purpose = "practice"
@@ -57,8 +57,21 @@ resource "aws_security_group" "sg_group" {
    
 }
 
+data "aws_security_group" "security_group" {
 
+  name = "launch-wizard-6"
 
+}
+
+output "insta_ip" {
+  value = aws_instance.web_server.public_ip
+
+}
+
+output "pubdns" {
+
+  value = aws_instance.web_server.public_dns
+}
 
 
   
