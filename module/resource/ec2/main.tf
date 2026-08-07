@@ -3,6 +3,7 @@ resource "aws_instance" "web_server" {
   instance_type = var.intype
   vpc_security_group_ids = [ var.sg ]
   key_name = var.key
+  subnet_id = var.ws_subnet
   tags = {
     purpose = "practice"
  }
