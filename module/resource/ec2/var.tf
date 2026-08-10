@@ -7,10 +7,7 @@ variable "intype" {
     
 }
 
-variable "sg" {
 
-    
-}
 
 variable "key" {
 
