@@ -1,9 +1,9 @@
 module "ec2" {
    source = "/home/vishwajeet/terraform9/module/resource/ec2"
-   instamid = ami-035827357e3c7e81
-   intype = t3.micro
-   sg = sg-0fecd01f792e2c2e8
-   key = linux-newkey
+   instamid = "ami-035827357e3c7e81"
+   intype = "t3.micro"
+   sg = "sg-0fecd01f792e2c2e8"
+   key = "linux-newkey"
    insdelprotection = false
 
    ws_subnet = module.vpc.subnet_id
