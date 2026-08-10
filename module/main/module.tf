@@ -12,6 +12,6 @@ module "ec2" {
 module "vpc" {
     source = "/home/vishwajeet/terraform9/module/resource/vpc"
     this_cidr = "10.0.0.0/16"
-    "this_subcidr = "10.0.1.0/24"
+    this_subcidr = "10.0.1.0/24"
 
 }
