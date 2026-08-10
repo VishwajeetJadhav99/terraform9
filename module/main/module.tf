@@ -5,7 +5,7 @@ module "ec2" {
    sg = sg-0fecd01f792e2c2e8
    key = linux-newkey
    insdelprotection = false
-   ws_subnet = 
+   ws_subnet = module.vpc.subnet_id 
 }
 
 module "vpc" {
