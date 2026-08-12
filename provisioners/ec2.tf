@@ -15,7 +15,7 @@ resource "aws_instance" "web_server" {
 
 provisioner "file" {
    source = "sample.txt"
-   destination = "/home/ec2-user/aws"
+   destination = "/home/ec2-user/sample.txt"
 }
 
 
