@@ -32,11 +32,11 @@ connection {
 }
 
 provisioner "remote-exec" {
-   "sudo yum install httpd -y"
-   "sudo systemctl start httpd"
-   "sudo yum update"
-   "sudo yum upgrade"
-   "sudo systemctl enable httpd"
+    sudo systemctl start httpd
+    sudo yum install httpd -y
+    sudo yum update
+    sudo yum upgrade
+    sudo systemctl enable httpd
 
 }
 
