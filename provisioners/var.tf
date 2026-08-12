@@ -9,7 +9,7 @@ variable "intype" {
 
 variable "sg" {
 
-    default = "sg-0fecd01f792e2c2e8"
+    default = "sg-0dcff2cf4400ae402"
 }
 
 variable "key" {
