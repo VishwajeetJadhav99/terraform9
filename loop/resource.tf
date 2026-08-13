@@ -27,7 +27,7 @@ resource"aws_instance" "web_server2" {
 }
 
 
-var "imageid" {
+variable "imageid" {
    default = ["ami-035827357e3c7e810", "ami-01a00762f46d584a1", "ami-017bc606d6a02cb3a" ]
 }
 
