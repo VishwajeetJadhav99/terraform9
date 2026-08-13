@@ -13,7 +13,7 @@ resource "aws_instance" "web_server" {
 
  resource "aws_security_group" "sg_group" {
   name = "sg.tf_group"
-  depends_on = "aws_instance.web_server"
+  depends_on = ["aws_instance.web_server"]
   ingress {
     from_port        = 80
     to_port          = 80
